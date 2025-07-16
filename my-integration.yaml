@@ -6,7 +6,7 @@ spec:
   traits:
     mount:
       configs:
-        - configmap: my-integration-prop:/etc/config/my-integration-config
+        - configmap: my-integration-prop:/etc/camel/conf.d/_my_integration_configmaps
   sources:
   - content: |
       import org.apache.camel.builder.RouteBuilder;
