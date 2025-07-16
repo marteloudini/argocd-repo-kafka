@@ -3,6 +3,10 @@ kind: Integration
 metadata:
   name: my-integration
 spec:
+  traits:
+    mount:
+      configs:
+        - configmap: my-integration-prop
   sources:
   - content: |
       import org.apache.camel.builder.RouteBuilder;
@@ -12,7 +16,7 @@ spec:
           public void configure() throws Exception {
               from("timer:java?period=1500")
                   .setBody()
-                      .simple("Hello Camel from ${routeId}")
+                      .simple("Hello Camel from ${routeId} [{{prop.application.name}}]")
                   .log("${body}");
           }
       }
