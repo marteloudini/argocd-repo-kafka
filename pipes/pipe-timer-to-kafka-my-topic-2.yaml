@@ -8,6 +8,10 @@ metadata:
   labels:
     app: camel-k-pipe
 spec:
+  traits:
+    mount:
+      configs:
+        - configmap:timer-to-kafka-my-topic-2-cm
   sink:
     properties:
       bootstrapServers: {{kafka-not-secured-sink.bootstrapServeurs}}

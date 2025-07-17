@@ -8,6 +8,10 @@ metadata:
   labels:
     app: camel-k-pipe
 spec:
+  traits:
+    mount:
+      configs:
+        - configmap:kafka-my-topic-to-log-cm
   sink:
     ref:
       apiVersion: camel.apache.org/v1

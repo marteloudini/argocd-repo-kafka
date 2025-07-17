@@ -11,7 +11,7 @@ spec:
   traits:
     mount:
       configs:
-        - configmap:timer-to-kafka-my-topic-prop
+        - configmap:timer-to-kafka-my-topic-argoc-cm
   sink:
     properties:
       bootstrapServers: {{kafka-not-secured-sink.bootstrapServeurs}}
