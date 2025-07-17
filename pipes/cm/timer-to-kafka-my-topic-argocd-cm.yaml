@@ -13,9 +13,3 @@ data:
     kafka-not-secured-sink.topic=my-topic
     timer-source.message=Hello world with pipe from github->ArgoCD
     timer-source.periode=5000
-  ownerReferences:
-    - apiVersion: camel.apache.org/v1
-      blockOwnerDeletion: true
-      controller: true
-      kind: Pipe
-      name: timer-to-kafka-my-topic-argocd
