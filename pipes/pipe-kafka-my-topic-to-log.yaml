@@ -19,8 +19,8 @@ spec:
       name: log-sink
   source:
     properties:
-      bootstrapServers: {{kafka-not-secured-sink.bootstrapServeurs}}
-      topic: {{kafka-not-secured-sink.topic}}
+      bootstrapServers: RAW({{kafka-not-secured-sink.bootstrapServeurs}})
+      topic: RAW({{kafka-not-secured-sink.topic}})
     ref:
       apiVersion: camel.apache.org/v1
       kind: Kamelet

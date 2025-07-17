@@ -4,7 +4,6 @@ metadata:
   labels:
     camel.apache.org/config.type: camel-properties
     camel.apache.org/pipe: timer-to-kafka-my-topic-2
-    camel.apache.org/properties.type: application
   name: timer-to-kafka-my-topic-2-cm
   namespace: camel-k-test
 data:
