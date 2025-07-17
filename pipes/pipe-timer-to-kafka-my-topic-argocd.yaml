@@ -8,18 +8,22 @@ metadata:
   labels:
     app: camel-k-pipe
 spec:
+  traits:
+    mount:
+      configs:
+        - configmap:timer-to-kafka-my-topic-prop
   sink:
     properties:
-      bootstrapServers: 'my-cluster-kafka-kafka-bootstrap.kafka.svc:9092'
-      topic: my-topic
+      bootstrapServers: {{kafka-not-secured-sink.bootstrapServeurs}}
+      topic: {{kafka-not-secured-sink.topic}}
     ref:
       apiVersion: camel.apache.org/v1alpha1
       kind: Kamelet
       name: kafka-not-secured-sink
   source:
     properties:
-      message: Hello world with pipe from github->ArgoCD
-      period: 5000
+      message: {{timer-source.message}}
+      period: {{timer-source.periode}}
     ref:
       apiVersion: camel.apache.org/v1
       kind: Kamelet

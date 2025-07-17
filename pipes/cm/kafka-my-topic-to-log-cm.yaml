@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    camel.apache.org/config.type: camel-properties
+    camel.apache.org/pipe: kafka-my-topic-to-log
+    camel.apache.org/properties.type: application
+  name: kafka-my-topic-to-log-cm
+  namespace: camel-k-test
+data:
+  application.properties: >
+    kafka-not-secured-sink.bootstrapServeurs=my-cluster-kafka-kafka-bootstrap.kafka.svc:9092
+    kafka-not-secured-sink.topic=my-topic
+  ownerReferences:
+    - apiVersion: camel.apache.org/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Pipe
+      name: pipe-kafka-my-topic-to-log
