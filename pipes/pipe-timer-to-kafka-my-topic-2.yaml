@@ -14,8 +14,8 @@ spec:
         - configmap:timer-to-kafka-my-topic-2-cm
   sink:
     properties:
-      bootstrapServers: {{kafka-not-secured-sink.bootstrapServeurs}}
-      topic: {{kafka-not-secured-sink.topic}}
+      bootstrapServers: {{bootstrapServeurs}}
+      topic: {{topic}}
     ref:
       apiVersion: camel.apache.org/v1alpha1
       kind: Kamelet
