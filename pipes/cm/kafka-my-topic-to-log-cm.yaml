@@ -7,5 +7,5 @@ metadata:
   namespace: camel-k-test
 data:
   application.properties: |
-    camel.kamelet.kafka-not-secured-source.kafka-not-secured-source.bootstrapServeurs=my-cluster-kafka-kafka-bootstrap.kafka.svc:9092
-    camel.kamelet.kafka-not-secured-source.kafka-not-secured-source.topic=my-topic
+    camel.kamelet.kafka-not-secured-source.bootstrapServeurs=my-cluster-kafka-kafka-bootstrap.kafka.svc:9092
+    camel.kamelet.kafka-not-secured-source.topic=my-topic
