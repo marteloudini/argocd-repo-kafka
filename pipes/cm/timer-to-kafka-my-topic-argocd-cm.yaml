@@ -11,5 +11,5 @@ data:
   application.properties: |
     camel.kamelet.kafka-not-secured-sink.kafka-not-secured-sink.bootstrapServeurs=my-cluster-kafka-kafka-bootstrap.kafka.svc:9092
     camel.kamelet.kafka-not-secured-sink.kafka-not-secured-sink.topic=my-topic
-    timer-source.message=Hello world with pipe from github->ArgoCD
-    timer-source.periode=5000
+    camel.kamelet.timer-source.timer-source.message=Hello world with pipe from github->ArgoCD
+    camel.kamelet.timer-source.timer-source.periode=5000
