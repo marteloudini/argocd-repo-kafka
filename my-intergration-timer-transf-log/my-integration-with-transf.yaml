@@ -12,9 +12,10 @@ spec:
           @Override
           public void configure() throws Exception {
               from("timer:java?period=1500")
+                  .routeId("Integration")
                   .setBody()
                       .simple("Hello Camel from ${routeId} , ${headers}")
-                  .log("${body}");
+                  .log("le log est ${body}");
           }
       }
     name: Test.java
