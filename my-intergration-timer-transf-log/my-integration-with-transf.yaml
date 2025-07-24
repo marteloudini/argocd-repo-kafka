@@ -14,8 +14,9 @@ spec:
               from("timer:java?period=1500")
                   .routeId("Integration")
                   .setBody()
-                      .simple("Hello Camel from ${routeId} , ${headers}")
-                  .log("le log est ${body}");
+                      .simple("Hello Camel from ${routeId} , headers = ${headers} , properties = ${}")
+                  .log("le log est ${body}")
+                  .to("log:my-integration-log?showAll=true&multiline=true");
           }
       }
     name: Test.java
