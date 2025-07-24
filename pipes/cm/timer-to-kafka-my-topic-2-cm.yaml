@@ -8,7 +8,7 @@ metadata:
   namespace: camel-k-test
 data:
   application.properties: |
-    camel.kamelet.kafka-not-secured-sink.bootstrapServeurs=my-cluster-kafka-kafka-bootstrap.kafka.svc:9092
+    camel.kamelet.kafka-not-secured-sink.bootstrapServers=my-cluster-kafka-kafka-bootstrap.kafka.svc:9092
     camel.kamelet.kafka-not-secured-sink.topic=my-topic
     camel.kamelet.timer-source.message=Hello world with pipe 2
     camel.kamelet.timer-source.periode=5000
