@@ -19,7 +19,7 @@
 
 - rest:
     openApi:
-      specification: greetings-api-cm.json
+      specification: greetings-api-cm
 
 - from:
    uri: "direct:greeting-api"
