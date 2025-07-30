@@ -14,7 +14,7 @@ spec:
       public class Greetings extends RouteBuilder {
           @Override
           public void configure() throws Exception {
-            from("direct:greetings-api")
+            from("direct:greeting-api")
                   .routeId("Integration greetings")
                   .setBody()
                       .simple("Hello Camel from ${routeId} , headers = ${headers}")
