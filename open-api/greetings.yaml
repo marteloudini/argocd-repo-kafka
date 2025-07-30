@@ -9,7 +9,7 @@ spec:
   - content: |
       import org.apache.camel.builder.RouteBuilder;
 
-      public class Greetings-open-api extends RouteBuilder {
+      public class Greetings extends RouteBuilder {
           @Override
           public void configure() throws Exception {
             from("direct:greetings-api")
@@ -20,4 +20,4 @@ spec:
                   .to("log:my-integration-log?showAll=true&multiline=true");
           }
       }
-    name: Greetings-open-api.java
+    name: Greetings.java
