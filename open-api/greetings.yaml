@@ -9,7 +9,7 @@ spec:
   - content: |
       import org.apache.camel.builder.RouteBuilder;
 
-      public class Test extends RouteBuilder {
+      public class Greetings-open-api extends RouteBuilder {
           @Override
           public void configure() throws Exception {
             from("direct:greetings-api")
