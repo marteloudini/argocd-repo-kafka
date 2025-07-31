@@ -14,12 +14,15 @@ spec:
       public class Greetings extends RouteBuilder {
           @Override
           public void configure() throws Exception {
-            from("direct:greeting-api")
-                  .routeId("Integration greetings")
-                  .setBody()
-                      .simple("Hello Camel from ${routeId} , headers = ${headers}")
-                  .log("le log est ${body}")
-                  .to("log:my-integration-log?showAll=true&multiline=true");
+         rest()
+            .get("/hello")
+            .to("direct:hello")
+
+          from("direct:hello")
+            .routeId("Integration greetings")
+            .setBody().simple("Hello Camel from ${routeId} , headers = ${headers}")
+            .log("le log est ${body}")
+            .to("log:my-integration-log?showAll=true&multiline=true");
           }
       }
     name: Greetings.java
