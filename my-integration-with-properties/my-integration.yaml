@@ -7,6 +7,8 @@ spec:
     mount:
       configs:
         - configmap:my-integration-prop
+    logging:
+      level: DEBUG
   sources:
   - content: |
       import org.apache.camel.builder.RouteBuilder;
