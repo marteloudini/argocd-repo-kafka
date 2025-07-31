@@ -14,7 +14,7 @@ spec:
       public class Test extends RouteBuilder {
           @Override
           public void configure() throws Exception {
-              from("timer:java?period=1500")
+              from("timer:java?period=10000")
                   .setBody()
                       .simple("Hello Camel from ${routeId} [{{prop.application.name}}]")
                   .log("${body}");
