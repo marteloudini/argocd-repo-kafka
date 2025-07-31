@@ -16,7 +16,7 @@ spec:
           public void configure() throws Exception {
          rest()
             .get("/hello")
-            .to("direct:hello")
+            .to("direct:hello");
 
           from("direct:hello")
             .routeId("Integration greetings")
