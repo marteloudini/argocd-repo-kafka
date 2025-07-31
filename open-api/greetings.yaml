@@ -14,8 +14,8 @@ spec:
       public class Greetings extends RouteBuilder {
           @Override
           public void configure() throws Exception {
-         rest()
-            .get("/hello")
+         rest("/camel/")
+            .get("/greetings/{name}")
             .to("direct:hello");
 
           from("direct:hello")
