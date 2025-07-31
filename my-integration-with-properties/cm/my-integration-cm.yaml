@@ -7,3 +7,4 @@ immutable: false
 data:
   application.properties: |
     prop.application.name=Mon application of martel
+    camel.k.logging.level = DEBUG
