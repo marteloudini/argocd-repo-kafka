@@ -9,7 +9,7 @@ metadata:
   namespace: camel-k-test
 data:
   application.properties: |
-    camel.kamelet.kafka-not-secured-sink.bootstrapServers=my-cluster-kafka-kafka-bootstrap.kafka.svc:9091
+    camel.kamelet.kafka-not-secured-sink.bootstrapServers=my-cluster-kafka-kafka-bootstrap.kafka.svc:9093
     camel.kamelet.kafka-not-secured-sink.topic=my-topic
     camel.kamelet.timer-source.message=Hello world with pipe from github->ArgoCD ${date:now:yyyyMMddHHmmss}
     camel.kamelet.timer-source.periode=10000
