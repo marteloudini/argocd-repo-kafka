@@ -13,4 +13,3 @@ data:
     camel.kamelet.postgresql-source.query=select * FROM public.actor_info WHERE first_name = 'Cuba' ORDER BY last_name
     camel.kamelet.postgresql-source.serverName=100.124.93.210
     camel.kamelet.postgresql-source.serverPort=5432
-    camel.kamelet.postgresql-source.username=hippo
