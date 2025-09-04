@@ -7,6 +7,6 @@ metadata:
     camel.apache.org/config.type: camel-properties  
     camel.apache.org/pipe: postgresql-dvdrental-actor-info-to-log
 data:
-  password: S0Rhe0l2Kit7dmR9TXlwNWNRMzBJd0sq
-  username: aGlwcG8=
+  camel.kamelet.postgresql-source.password: S0Rhe0l2Kit7dmR9TXlwNWNRMzBJd0sq
+  camel.kamelet.postgresql-source.username: aGlwcG8=
 type: Opaque
