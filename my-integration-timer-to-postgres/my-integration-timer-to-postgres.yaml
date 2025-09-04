@@ -11,6 +11,9 @@ spec:
       level: DEBUG
   sources:
   - content: |
+      // camel-k: build-property=quarkus.datasource.camel.db-kind=postgresql
+      // camel-k: dependency=mvn:io.quarkus:quarkus-jdbc-postgresql:3.26.2
+      
       import org.apache.camel.builder.RouteBuilder;
 
       public class Test extends RouteBuilder {
