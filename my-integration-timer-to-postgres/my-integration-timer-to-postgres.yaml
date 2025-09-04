@@ -16,18 +16,27 @@ spec:
       public class Test extends RouteBuilder {
 
         public static String ROUTE_ID_INSERT = "JdbcRouteInsert";
+        public static String ROUTE_ID_SELECT = "JdbcRouteSelect";
           @Override
           public void configure() throws Exception {
+             // from("timer:java?period=10000")
+             //     .routeId(ROUT_ID_INSERT)
+             //     setHeader("h_name"), constant("name")
+             //     setHeader("h_prenom"), constant("prenom")
+             //     setHeader("h_text").simple("[{{prop.application.name}}]")
+             //     setHeader("h_date"), constant("2025-02-01")
+             //     .setBody(simple("insert into peoples (name, prenom, text, date)" + 
+             //        "values (:?h_name, :?h_prenom, :?h_test, to_date(:?h_date))"))
+             //     .log("${body}")
+             //     .to("jdbc:pgDataSource?useHeadersAsParameters=true");
+
               from("timer:java?period=10000")
-                  .routeId(ROUT_ID_INSERT)
-                  setHeader("h_name"), constant("name")
-                  setHeader("h_prenom"), constant("prenom")
-                  setHeader("h_text").simple("[{{prop.application.name}}]")
-                  setHeader("h_date"), constant("2025-02-01")
-                  .setBody(simple("insert into peoples (name, prenom, text, date)" + 
-                     "values (:?h_name, :?h_prenom, :?h_test, to_date(:?h_date))"))
+                  .routeId(ROUTE_ID_SELECT)
+                  setHeader("h_first_name"), constant("cuba")
+                  .setBody(simple("select * FROM public.actor_info WHERE first_name = :?h_first_name ORDER BY last_name"))
                   .log("${body}")
                   .to("jdbc:pgDataSource?useHeadersAsParameters=true");
+
           }
       }
     name: Test.java

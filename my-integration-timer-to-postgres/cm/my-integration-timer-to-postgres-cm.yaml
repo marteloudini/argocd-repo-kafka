@@ -6,4 +6,8 @@ metadata:
 immutable: false
 data:
   application.properties: |
-    prop.application.name=Mon application insert postgresql
+    prop.application.name=Mon application select postgresql
+    quarkus.datasource.db-kind=postgresql
+    quarkus.datasource.camel.jdbc.url=jdbc:postgresql://100.124.93.210:5432/dvdrental
+    quarkus.datasource.camel.username=rhino
+    quarkus.datasource.camel.password=KDa{Iv*+{vd}Myp5cQ30IwK*
