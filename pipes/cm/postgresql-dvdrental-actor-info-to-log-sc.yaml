@@ -4,9 +4,8 @@ metadata:
   name: postgresql-dvdrental-actor-info-to-log-hippo-sc
   namespace: camel-k-test
   labels:
-    camel.apache.org/config.type: camel-properties
     camel.apache.org/pipe: postgresql-dvdrental-actor-info-to-log
 data:
-  username: hippo
-  password: 'KDa{Iv*+{vd}Myp5cQ30IwK*'
+  password: S0Rhe0l2Kit7dmR9TXlwNWNRMzBJd0sq
+  username: aGlwcG8=
 type: Opaque
