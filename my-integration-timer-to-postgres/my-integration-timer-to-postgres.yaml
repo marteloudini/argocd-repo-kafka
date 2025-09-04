@@ -32,10 +32,10 @@ spec:
 
               from("timer:java?period=10000")
                   .routeId(ROUTE_ID_SELECT)
-                  setHeader("h_first_name"), constant("cuba")
+                  .setHeader(("h_first_name"), constant("cuba"))
                   .setBody(simple("select * FROM public.actor_info WHERE first_name = :?h_first_name ORDER BY last_name"))
                   .log("${body}")
-                  .to("jdbc:pgDataSource?useHeadersAsParameters=true");
+                  .to("jdbc:postgresql?useHeadersAsParameters=true");
 
           }
       }
