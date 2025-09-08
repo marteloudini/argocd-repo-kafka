@@ -7,6 +7,9 @@ spec:
     mount:
       configs:
         - configmap:my-integration-timer-to-postgres-prop
+    environment:
+      vars:
+        - TZ:Europe/Brussels
     logging:
       level: DEBUG
   sources:

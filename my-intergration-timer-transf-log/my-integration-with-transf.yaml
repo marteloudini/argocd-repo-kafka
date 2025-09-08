@@ -3,6 +3,10 @@ kind: Integration
 metadata:
   name: my-integration-with-transf
 spec:
+  traits:
+    environment:
+      vars:
+        - TZ:Europe/Brussels
   sources:
   - content: |
       import org.apache.camel.builder.RouteBuilder;

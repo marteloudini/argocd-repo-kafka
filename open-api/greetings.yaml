@@ -7,6 +7,10 @@ metadata:
   annotations:
       trait.camel.apache.org/mount.configs: configmap:greetings-api-cm
 spec:
+  traits:
+    environment:
+      vars:
+        - TZ:Europe/Brussels
   sources:
   - content: |
       import org.apache.camel.builder.RouteBuilder;
