@@ -10,7 +10,7 @@ spec:
   traits:
     environment:
       vars:
-        - TZ:Europe/Brussels
+        - TZ=Europe/Brussels
   sources:
   - content: |
       import org.apache.camel.builder.RouteBuilder;
