@@ -9,7 +9,7 @@ spec:
         - configmap:my-integration-prop
     environment:
       vars:
-        - TZ:Europe/Brussels        
+        - TZ=Europe/Brussels        
     logging:
       level: DEBUG
   sources:
